@@ -2,9 +2,13 @@
 //
 
 #include <iostream>
+#include "Define/Define.h"
 
 int main()
 {
-	std::cout << "Hello CMake.\n";
+	mainlog.init("main");
+	mainlog.get("main() has started\n");
+
+	mainlog.get("main() has ended up\n");
 	return 0;
 }
