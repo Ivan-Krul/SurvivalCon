@@ -1,13 +1,17 @@
 #pragma once
 #include "../Define/Define.h"
+#include "ISubApp/ISubApp.h"
 
+// launcher of subapplications
 class SubApplication {
 	void _parse_symbols();
+	ISubApp* _hold;
 public:
-	enum subapplication_enum {
+	enum subsimpleapplication_enum {
 		parse_symbols
 	};
 
-	SubApplication(subapplication_enum enumir);
+	SubApplication(subsimpleapplication_enum enumir);
+	SubApplication(ISubApp* subapp);
 };
 #include "SubApplication.cpp"
