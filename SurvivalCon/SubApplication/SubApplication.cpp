@@ -11,6 +11,7 @@ void SubApplication::_parse_symbols() {
 }
 
 SubApplication::SubApplication(subsimpleapplication_enum enumir) {
+	_hold = nullptr;
 	switch(enumir) {
 		case SubApplication::parse_symbols:
 			#ifdef CONMODE
@@ -20,4 +21,16 @@ SubApplication::SubApplication(subsimpleapplication_enum enumir) {
 		default:
 			break;
 	}
+}
+
+SubApplication::SubApplication(ISubApp* subapp) {
+	_hold = subapp;
+}
+
+void SubApplication::cycle() {
+	_hold->cycle();
+}
+
+SubApplication::~SubApplication() {
+	delete _hold;
 }

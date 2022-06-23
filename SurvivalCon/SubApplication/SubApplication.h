@@ -13,5 +13,9 @@ public:
 
 	SubApplication(subsimpleapplication_enum enumir);
 	SubApplication(ISubApp* subapp);
+
+	void cycle();
+
+	~SubApplication();
 };
 #include "SubApplication.cpp"
