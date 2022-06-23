@@ -14,6 +14,8 @@ public:
 	SubApplication(subsimpleapplication_enum enumir);
 	SubApplication(ISubApp* subapp);
 
+	void out_memsize();
+	void out_name();
 	void cycle();
 
 	~SubApplication();

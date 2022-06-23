@@ -7,3 +7,7 @@
 #else
 #include <stdio.h>
 #endif
+
+const char* address() {
+	return "(A)";
+}
